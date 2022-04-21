@@ -5,7 +5,7 @@ public class Box  {   //box class with 4 sides of the box
     double d;
     Box(double a,double b,double c,double d) throws InvalidBoxException
     {
-        if(a*b*c*d <= 0)                       //various types of exceptions change the data members of exception object accordingly
+        if(a<=0 || b<=0 || c<=0 || d<=0)                       //various types of exceptions change the data members of exception object accordingly
             throw new InvalidBoxException(0) ;
         else if(a!=c && b!=d)
             throw new InvalidBoxException(1);
